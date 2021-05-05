@@ -1,0 +1,1 @@
+!async function(a){const o=await fetch("http://api.openweathermap.org/data/2.5/weather?q=dallas, ga&APPID=110409e1bb98c0085bb402fb53f95f29",{mode:"cors"}),t=await o.json();console.log(t)}(),async function(a){const o=await fetch("http://api.openweathermap.org/data/2.5/weather?q=london, uk&APPID=110409e1bb98c0085bb402fb53f95f29",{mode:"cors"}),t=await o.json();console.log(t)}();
