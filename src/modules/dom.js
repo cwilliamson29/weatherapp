@@ -32,15 +32,4 @@ function currentDOM(obj) {
     currentWrap.appendChild(icon);
 }
 
-const cur = {
-    current: {
-        city: 'dallas',
-        temp: 60,
-        temp_hi: 70,
-        temp_lo: 40,
-        weather: 'clouds',
-        icon: '11d'
-    }
-}
-
 export { currentDOM }
