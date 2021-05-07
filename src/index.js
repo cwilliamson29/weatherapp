@@ -1,16 +1,29 @@
-const search = "dallas, ga";
-const searchUK = "london, uk";
+import storeData from './modules/storeData'
 
-async function getWeatherUSA(loc) {
-    const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${loc}&APPID=110409e1bb98c0085bb402fb53f95f29`, { mode: 'cors' })
-    const weaData = await response.json();
+let cty = 'usa';
 
-    console.log(weaData)
-}
-async function getWeather(loc) {
-    const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${loc}&APPID=110409e1bb98c0085bb402fb53f95f29`, { mode: 'cors' })
-    const weaData = await response.json();
-    console.log(weaData)
-}
-getWeatherUSA(search)
-getWeather(searchUK)
+const USABtn = document.getElementById('searchUSA');
+USABtn.addEventListener('click', () => {
+    cty = 'usa';
+    console.log(cty)
+})
+
+const otherBtn = document.getElementById('searchOther');
+otherBtn.addEventListener('click', () => {
+    cty = 'other';
+    console.log(cty)
+})
+
+const searchBar = document.getElementById('searchBar');
+const searchBtn = document.getElementById('searchBtn');
+searchBtn.addEventListener('click', () => {
+    const search = searchBar.value;
+    storeData(search, cty);
+});
+
+function loadPage() {
+    const search = searchBar.value;
+    storeData(search, cty);
+};
+
+loadPage();

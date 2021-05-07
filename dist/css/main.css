@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#navbar {
+    margin: auto;
+    height: 100px;
+    background: rgb(1, 111, 255);
+}
+
+#current_Wrap {
+    background: grey;
+}
+
+#search {
+    display: block;
+    width: 75%;
+    height: 40px;
+    background: white;
+    box-shadow: 0 0 10px 1px black;
+    border: 1px solid black;
+    border-radius: 25px;
+}
+
+#searchUSA {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    width: 10%;
+    height: 40px;
+    background: red;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+#searchOther {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    width: 20%;
+    height: 40px;
+    background: rgb(1, 111, 255);
+}
+
+#searchBar {
+    float: left;
+    width: 60%;
+    height: 85%;
+    border: none;
+    padding-left: 20px;
+    margin-left: 5px;
+    margin-top: 2px;
+}
+
+#searchBtn {
+    float: right;
+    width: 30px;
+    height: 40px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border: 1px solid grey;
+    background: white;
+}
+
+#searchBtn:focus {
+    outline: none;
+}
+
+#searchBtn img {
+    width: 100%;
+}

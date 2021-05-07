@@ -2,19 +2,29 @@
 <html>
 
 <head>
-    <meta charset="">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <title>Weather App</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-    <input type="text" id="search">
-    <img src="#" />
-    <button id="submit">search</button>
+    <nav id="navbar">
+        <div id="">
+            <div id="search">
+                <div id="searchUSA">USA</div>
+                <div id="searchOther">Other Country</div>
+                <input id="searchBar" type="text" value="Atlanta, GA">
+                <button id="searchBtn">
+             <img src="https://raw.githubusercontent.com/cwilliamson29/google-homepage-testproj/main/img/search-icon.png">
+          </button>
+            </div>
+    </nav>
 
-    
-    <script src="main.js">
-    </script>
+
+    <div id="current_wrap"></div>
 </body>
 
+<script src="main.js"></script>
 
 </html>
