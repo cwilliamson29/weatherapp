@@ -52,13 +52,13 @@ async function getWeather(loc) {
     return wea
 }
 async function getForecastUSA(loc) {
-    const response = await fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${loc},usa&APPID=7e2565eabacd81524ddf1835a845553d`, { mode: 'cors' })
+    const response = await fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${loc},usa&units=imperial&APPID=7e2565eabacd81524ddf1835a845553d`, { mode: 'cors' })
     const res = await response.json();
     const res2 = await new setForecastData(res);
     return res2
 }
 async function getForecast(loc) {
-    const response = await fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${loc}&APPID=7e2565eabacd81524ddf1835a845553d`, { mode: 'cors' })
+    const response = await fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${loc}&units=imperial&APPID=7e2565eabacd81524ddf1835a845553d`, { mode: 'cors' })
     const res = await response.json();
     const res2 = await new setForecastData(res);
     return res2
