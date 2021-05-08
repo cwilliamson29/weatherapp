@@ -33,7 +33,7 @@ function currentDOM(obj) {
     const ic = obj.current.icon;
     icon.setAttribute('id', 'curicon');
     const icImg = document.createElement('img');
-    icImg.src = `http://openweathermap.org/img/wn/${ic}@2x.png`
+    icImg.src = `https://openweathermap.org/img/wn/${ic}@2x.png`
     icon.appendChild(icImg);
 
     currentWrap.appendChild(city);
@@ -78,7 +78,7 @@ function forecastDOM(cont, obj, a) {
     const ic = obj.cast.hourly[a].wea_icon;
     icon.setAttribute('id', 'icon');
     const icImg = document.createElement('img');
-    icImg.src = `http://openweathermap.org/img/wn/${ic}@2x.png`
+    icImg.src = `https://openweathermap.org/img/wn/${ic}@2x.png`
     icon.appendChild(icImg);
 
     cont.appendChild(hourWrap)
@@ -125,7 +125,7 @@ function extForecastDOM(cont, obj, a) {
     const ic = obj.cast.hourly[a].wea_icon;
     icon.setAttribute('id', 'extIcon');
     const icImg = document.createElement('img');
-    icImg.src = `http://openweathermap.org/img/wn/${ic}@2x.png`
+    icImg.src = `https://openweathermap.org/img/wn/${ic}@2x.png`
     icon.appendChild(icImg);
 
     cont.appendChild(hourWrap)
