@@ -81,20 +81,8 @@ async function getWeatherUSA(loc) {
     return usaWea;
 }
 
-async function getWeather(loc) {
-    const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${loc}&units=imperial&APPID=7e2565eabacd81524ddf1835a845553d`, { mode: 'cors' })
-    const res = await response.json();
-    const wea = await new SetWeatherData(res.name, res.main.temp, res.main.feels_like, res.main.humidity, res.main.temp_max, res.main.temp_min, res.weather[0].main, res.weather[0].icon);
-    return wea
-}
 async function getForecastUSA(loc) {
     const response = await fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${loc},usa&units=imperial&APPID=7e2565eabacd81524ddf1835a845553d`, { mode: 'cors' })
-    const res = await response.json();
-    const res2 = await new setForecastData(res);
-    return res2
-}
-async function getForecast(loc) {
-    const response = await fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${loc}&units=imperial&APPID=7e2565eabacd81524ddf1835a845553d`, { mode: 'cors' })
     const res = await response.json();
     const res2 = await new setForecastData(res);
     return res2
